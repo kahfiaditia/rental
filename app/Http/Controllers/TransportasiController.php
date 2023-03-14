@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ArmadaModel;
+use App\Models\TentangModel;
 
 class TransportasiController extends Controller
 {
@@ -16,10 +17,11 @@ class TransportasiController extends Controller
     public function transportasi()
     {
         $armada = ArmadaModel::all();
+        $tentang = TentangModel::all();
         $data = [
             'title' => $this->title,
-           
-            'armada' => $armada
+            'armada' => $armada,
+            'tentang' => $tentang
         ];
         return view('transportasi')->with($data);
     }

@@ -9,7 +9,7 @@
     <meta content="Mannatthemes" name="author" />
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ URL::asset('admin/images/logo_sekolah.jpeg') }}">
+    <link rel="shortcut icon" href="{{ URL::asset('admin/images/car.png') }}">
 
     <!-- DataTables -->
     <link href="{{ URL::asset('admin/plugins/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet"

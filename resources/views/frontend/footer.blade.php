@@ -4,15 +4,20 @@
 						<div class="row">
 							
 							<div class="col-lg-4 col-md-4">
-								<div class="footer-widget">
-									<img src="image/logo.png" class="img-footer" alt="" />
+								@foreach ($tentang as $item)
+									<div class="footer-widget">
+										@if ($item->image != null)
+											<img src="{{ URL::asset('files/logo/' . $item->image) }}" class="img-footer" alt="" />
+										@endif
 									<div class="footer-add">
-										<p>Jalan Sawah Balong</p>
-										<p> Ketapang Cipondoh Tangerang</p>
-										<p>0878-8857-8686</p>
-										<p>majuberkah@gmail.comm</p>
+										
+										<p>{{ $item->alamat }}</p>
+										<p>{{ $item->Provinsi }}</p>
+										<p>{{ $item->telp1 }}</p>
+										<p>{{ $item->email1 }}</p>	
+										
 									</div>
-									
+									@endforeach
 								</div>
 							</div>		
 							<div class="col-lg-4 col-md-4">

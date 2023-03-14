@@ -7,6 +7,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\AkunController;
 use App\Http\Controllers\ArmadaController;
 use App\Http\Controllers\TransportasiController;
+use App\Http\Controllers\TentangController;
 
 
 /*
@@ -47,5 +48,6 @@ Route::group(
         Route::resource('/akun', AkunController::class);
         Route::get('/profile/{id}', [AkunController::class, 'profile'])->name('akun.profile');
         Route::resource('/armada', ArmadaController::class);
+        Route::resource('/tentang', TentangController::class);
     }
 );

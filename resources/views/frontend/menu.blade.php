@@ -3,22 +3,26 @@
 					<nav id="navigation" class="navigation navigation-landscape">
 						<div class="nav-header">
 							<a class="nav-brand" href="#">
-								<img src="image/logo.png" class="logo" alt="" />
+								@foreach ($tentang as $item)
+								@if ($item->image != null)
+									<img src="{{ URL::asset('files/logo/' . $item->image) }}" class="logo" alt="" />
+								@endif
 							</a>
 							<div class="nav-toggle"></div>
 						</div>
 						<div class="nav-menus-wrapper" style="transition-property: none;">
 							<ul class="nav-menu">
 								<li><a href="/">Home</a></li>
-								<li><a href="{{ route('transportasi') }}">Armada dan Paket	</a></li>
-								<li><a href="#">Blog</a></li>
-								<li><a href="#">Kontak</a></li>
+								<li><a href="{{ route('transportasi') }}">Armada dan Paket</a></li>
 							</ul>
 							
 							<ul class="nav-menu nav-menu-social align-to-right">
 								
 								<li class="login_click light" >
-									<a href="https://wa.me/6287888578686" target="_blank">Hubungi Kami</a>
+									
+									<a href="https://wa.me/{{ $item->telp1 }}" target="_blank">Hubungi Kami</a>
+										
+									@endforeach
 								</li>
 							</ul>
 						</div>

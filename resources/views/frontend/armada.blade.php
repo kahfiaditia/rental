@@ -34,8 +34,10 @@
 								</div>
 										
 								<div class="ed_view_link">
-									<a href="https://wa.me/6287888578686" class="btn btn-theme enroll-btn" target="_blank">Hubungi Kami<i class="fab fa-whatsapp"></i></a>
-									<a href="tel:+6287888578686" class="btn btn-theme enroll-btn" target="_blank">Hubungi Kami<i class="fas fa-phone"></i></a>
+									@foreach ($tentang as $item )
+									<a href="https://wa.me/{{ $item->telp1 }}" class="btn btn-theme enroll-btn" target="_blank">Hubungi Kami<i class="fab fa-whatsapp"></i></a>
+									<a href="tel:+{{  $item->telp1  }}" class="btn btn-theme enroll-btn" target="_blank">Hubungi Kami<i class="fas fa-phone"></i></a>
+									@endforeach
 								</div>
 								
 							</div>	

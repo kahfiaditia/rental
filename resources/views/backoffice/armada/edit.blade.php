@@ -115,7 +115,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     </div>
                     <div class="modal-body text-center">
-                        <img src="{{ URL::asset('files/produk/' . $data->image) }}" width="100%" />
+                        <img src="{{ URL::asset('files/armada/' . $data->image) }}" width="100%" />
                     </div>
                 </div>
             </div>
